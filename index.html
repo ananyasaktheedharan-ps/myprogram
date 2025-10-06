@@ -3,115 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 3 - Light Theme JavaScript Practice</title>
+    <title>Day 3 - JavaScript Practice</title>
     <style>
-        /* New Light Theme Colors */
-        :root {
-            --background-color: #f7f9fc; /* Off-white / very light gray */
-            --text-color: #333333;      /* Dark text */
-            --header-color: #007bff;    /* Bright Blue */
-            --button-bg: #28a745;       /* Success Green */
-            --button-text: #ffffff;     /* White text for button */
-            --output-bg: #e9ecef;       /* Light gray for code block */
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            text-align: left;
-            padding: 40px;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            /* Updated: Warm, earthy gradient */
+            background: linear-gradient(to right, #f5d0a9, #d4a97b);
+            /* Updated: Darker text for contrast */
+            color: #4b3832;
+            text-align: center;
+            padding: 50px;
         }
-
-        .container {
-            max-width: 750px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
         h1 {
-            font-size: 2.2em;
+            font-size: 3em;
             margin-bottom: 10px;
-            color: var(--header-color);
-            border-bottom: 3px solid var(--header-color);
-            padding-bottom: 15px;
+            /* Inherits color from body, but can be set explicitly */
+            color: #4b3832;
         }
-
         p {
-            font-size: 1.05em;
-            margin-bottom: 25px;
+            font-size: 1.2em;
+            color: #4b3832;
         }
-
-        button {
-            padding: 10px 20px;
-            font-size: 1em;
-            font-weight: 600;
-            background-color: var(--button-bg);
-            color: var(--button-text);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.2s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-
-        button:hover {
-            background-color: #218838;
-            transform: translateY(-1px);
-        }
-
-        #output {
+        a {
+            display: inline-block;
             margin-top: 20px;
-            font-size: 1.1em;
-            font-family: 'Consolas', 'Courier New', monospace;
-            color: #d9534f;
-            background-color: var(--output-bg);
-            padding: 15px;
-            border-left: 5px solid var(--header-color);
-            border-radius: 4px;
-            white-space: pre-wrap;
-            text-align: left;
+            padding: 10px 20px;
+            /* Updated: Light, complementary background for the button */
+            background-color: #ede0d4;
+            /* Updated: Dark text for the button */
+            color: #4b3832;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        a:hover {
+            /* Updated: Slightly darker hover state */
+            background-color: #e0d0c1;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Day 3 - JavaScript Practice (Light Theme) 💡</h1>
-        <p>This is a practical exercise demonstrating a common JavaScript **array method** to find the largest value in a set of numbers.</p>
+    <h1>Day 3 - JavaScript Practice</h1>
+    <p>Welcome to my collection of JavaScript exercises! Explore loops, functions, arrays, and more.</p>
+    <a href="practice.js" target="_blank">View JavaScript Code</a>
+    <pre id="output"></pre>
 
-        <button onclick="findMaxValueAndDisplay()">Find Maximum Value</button>
-
-        <div id="output">Output will appear here after execution...</div>
-    </div>
-
-    <script>
-        /**
-         * Day 3 Practice Exercise: Find the maximum value in an array.
-         */
-        function findMaxValueAndDisplay() {
-            // 1. Define an array of numbers (the dataset)
-            const dataPoints = [45, 12, 88, 7, 91, 53];
-
-            // 2. Use the Math.max() method along with the spread operator (...)
-            const maxVal = Math.max(...dataPoints);
-
-            // 3. Construct the output message and update the HTML element
-            const outputElement = document.getElementById('output');
-            outputElement.innerHTML = `
-                // Input Data:
-                const dataPoints = [${dataPoints.join(', ')}];
-
-                // Result:
-                The largest value in the array is: ${maxVal}
-            `;
-
-            document.querySelector('h1').textContent = 'Day 3 - Max Value Found! 👍';
-        }
-    </script>
+    <script src="practice.js"></script>
 </body>
 </html>
